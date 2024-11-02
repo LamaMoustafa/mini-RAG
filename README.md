@@ -86,11 +86,14 @@ set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
 
 ### Running
 
-1. **Start the application**
+1. **Start the FastAPI server**
 
     ```sh
-    python app.py
+    uvicorn main:app --reload
     ```
+### Postman Collection
+
+To test the API endpoints with Postman, download the Postman collection from the [assets folder](https://github.com/LamaMoustafa/mini-RAG/blob/main/assets/mini-RAG.postman_collection.json).
 
 ## Features
 
