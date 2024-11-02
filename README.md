@@ -76,6 +76,13 @@ To set up this project locally, follow these steps.
     ```sh
     pip install -r requirements.txt
     ```
+4. **Setup the environment variables**
+
+    ```sh
+    cp .env.example .env
+    ```
+
+set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
 
 ### Running
 
