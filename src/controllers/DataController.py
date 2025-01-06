@@ -26,7 +26,7 @@ class DataController(BaseController):
         file_name = re.sub(r'\s+', '_', file_name)
         return file_name
 
-    def generate_unique_file_name(self, file_name:str, project_id:str):
+    def generate_unique_file_path(self, file_name:str, project_id:str):
         random_key = self.random_string()
         project_path = ProjectController().get_project_path(project_id=project_id)
         cleaned_file_name = self.get_cleaned_file_name(file_name)
@@ -36,5 +36,5 @@ class DataController(BaseController):
             random_key = self.random_string()
             new_file_path = os.path.join(project_path, f'{random_key}_{cleaned_file_name}')
         
-        return new_file_path
+        return new_file_path, f'{random_key}_{cleaned_file_name}'
     
