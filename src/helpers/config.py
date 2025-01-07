@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import List
+
 class Settings(BaseSettings):
     APP_NAME:str
     APP_VERSION:str
@@ -8,9 +9,7 @@ class Settings(BaseSettings):
     FILE_DEFAULT_CHUNK_SIZE:int
     
     class Config:
-        env_file = "src/.env"
+        env_file = ".env"
 
 def get_settings():
-    settings = Settings()
-    print(settings.dict())
-    return settings
+    return Settings()
